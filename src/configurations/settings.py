@@ -16,15 +16,10 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # for PostgreSQL
-<<<<<<< HEAD
-    db_host: str = "postgresql+asyncpg://postgres:asel2002@localhost:5432"
-    db_name: str = "fastapi_project_db"
-=======
     db_host: str 
     db_name: str 
->>>>>>> 8bae65d651510abacd8d4b66a2610f1ff9587494
     db_test_name: str = "fastapi_project_test_db"
-    max_connection_count: int = 1000
+    max_connection_count: int = 10
 
     @property
     def database_url(self) -> str:
